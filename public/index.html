@@ -12,10 +12,14 @@
         <img aria-hidden="true" alt="link-icon" src="https://openui.fly.dev/openui/24x24.svg?text=🔗" class="mr-2" />
         <h1 class="text-3xl font-bold">ENCURTADOR</h1>
       </div>
-      <label for="url-input" class="block text-lg mb-2">Cole a URL para ser encurtada</label>
-      <input type="text" id="url-input" placeholder="Cole o link aqui" class="border border-border p-2 rounded-lg w-full mb-4" />
-      <button class="bg-accent bg-green-800 text-white hover:bg-green-900 p-3 rounded-lg w-full transition duration-300">Encurtar URL</button>
+      <form id="urlForm">
+        <label for="url-input" class="block text-lg mb-2">Cole a URL para ser encurtada</label>
+        <input type="text" id="url-input" placeholder="Cole o link aqui" class="border border-border p-2 rounded-lg w-full mb-4" />
+        <button class="bg-accent bg-green-800 text-white hover:bg-green-900 p-3 rounded-lg w-full transition duration-300" type="submit">Encurtar URL</button>
+      </form>
+      <div class="result" id="result" style="display: none;"></div>
       <p class="text-muted-foreground mt-4">Encurtador é uma ferramenta para encurtar URLs e gerar links curtos. Com o encurtador de URL é possível criar um link encurtado fácil de compartilhar.</p>
     </div>
   </body>
+  <script src="script.js"></script>
 </html>
