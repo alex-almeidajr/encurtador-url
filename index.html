@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <title>Encurtador</title>
+  </head>
+  <body class="bg-background text-foreground flex items-center justify-center min-h-screen">
+    <div class="bg-card p-8 rounded-lg shadow-lg w-full max-w-md">
+      <div class="flex items-center mb-4">
+        <img aria-hidden="true" alt="link-icon" src="https://openui.fly.dev/openui/24x24.svg?text=🔗" class="mr-2" />
+        <h1 class="text-3xl font-bold">ENCURTADOR</h1>
+      </div>
+      <label for="url-input" class="block text-lg mb-2">Cole a URL para ser encurtada</label>
+      <input type="text" id="url-input" placeholder="Cole o link aqui" class="border border-border p-2 rounded-lg w-full mb-4" />
+      <button class="bg-accent bg-green-800 text-white hover:bg-green-900 p-3 rounded-lg w-full transition duration-300">Encurtar URL</button>
+      <p class="text-muted-foreground mt-4">Encurtador é uma ferramenta para encurtar URLs e gerar links curtos. Com o encurtador de URL é possível criar um link encurtado fácil de compartilhar.</p>
+    </div>
+  </body>
+</html>
