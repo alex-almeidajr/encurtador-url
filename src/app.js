@@ -1,4 +1,5 @@
 import express from "express";
+import path from 'path';
 import conectaNaDatabase from "../config/dbConnect.js";
 import routes from "../index.js";
 

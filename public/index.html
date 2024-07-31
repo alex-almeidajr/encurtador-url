@@ -20,6 +20,36 @@
       <div class="result" id="result" style="display: none;"></div>
       <p class="text-muted-foreground mt-4">Encurtador é uma ferramenta para encurtar URLs e gerar links curtos. Com o encurtador de URL é possível criar um link encurtado fácil de compartilhar.</p>
     </div>
+    <script>
+      document.getElementById('urlForm').addEventListener('submit', async (event) => {
+    event.preventDefault();
+  
+    const urlInput = document.getElementById('url-input');
+    const resultDiv = document.getElementById('result');
+    
+    const originalUrl = urlInput.value;
+  
+    try {
+      const response = await fetch('http://localhost:3000/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ originalUrl })
+      });
+  
+      if (response.ok) {
+        const data = await response.json();
+        resultDiv.style.display = 'block';
+        resultDiv.innerHTML = `<p>URL Encurtada: <a href="${data.shortUrl}" target="_blank">${data.shortUrl}</a></p>`;
+      } else {
+        throw new Error('Falha ao encurtar a URL');
+      };
+    } catch (error) {
+      resultDiv.style.display = 'block';
+      resultDiv.innerHTML = `<p style="color: red;">${error.message}</p>`;
+    };
+  });
+    </script>
   </body>
-  <script src="script.js"></script>
 </html>
